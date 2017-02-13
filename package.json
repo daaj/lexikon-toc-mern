@@ -4,9 +4,10 @@
   "description": "performance-good, seo-friendly, server-side rendering, universal react",
   "main": "index.js",
   "scripts": {
-    "start": "cd dist && node server",
+    "exec": "cd dist && node server",
     "build": "webpack",
-    "lint": "functionhappy | snazzy"
+    "lint": "functionhappy | snazzy",
+    "start": "npm run build && npm run exec"
   },
   "repository": {
     "type": "git",
@@ -41,8 +42,12 @@
     "webpack-node-externals": "^1.2.0"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "express": "^4.14.1",
+    "jquery": "^3.1.1",
+    "markdown-toc": "^1.1.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "remarkable": "^1.7.1"
   }
 }

@@ -7,6 +7,7 @@ import template from './template';
 const server = express();
 
 server.use('/assets', express.static('assets'));
+server.use('/node_modules', express.static('../node_modules'));
 
 server.get('/', (req, res) => {
   const isMobile = true;
