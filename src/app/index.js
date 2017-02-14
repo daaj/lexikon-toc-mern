@@ -2,16 +2,16 @@ import React, { Component, PropTypes } from 'react';
 
 export default class App extends Component {
   render() {
-    const { isMobile } = this.props;
+    const { toc } = this.props;
 
     return (
       <div>
-        <h1>hello world {isMobile ? 'mobile' : 'desktop'}</h1>
+        <div dangerouslySetInnerHTML={{ __html: this.props.toc }} />
       </div>
     );
   }
 }
 
 App.propTypes = {
-  isMobile: PropTypes.bool.isRequired
+  toc: PropTypes.string.isRequired
 };
